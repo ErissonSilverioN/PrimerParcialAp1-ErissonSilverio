@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrimerParcial_Aplicada1.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,8 @@ namespace PrimerParcial_Aplicada1
 
         private void Registrar_Click(object sender, RoutedEventArgs e)
         {
-
+            rArticulos registro = new rArticulos();
+            registro.ShowDialog();
         }
     }
 }
