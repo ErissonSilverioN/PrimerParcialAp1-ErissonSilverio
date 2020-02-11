@@ -213,7 +213,9 @@ namespace PrimerParcial_Aplicada1.UI
 
         }
 
-        
-        
+        private void costoTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Calcular();
+        }
     }
 }
