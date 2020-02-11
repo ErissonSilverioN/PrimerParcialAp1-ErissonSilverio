@@ -205,17 +205,44 @@ namespace PrimerParcial_Aplicada1.UI
             
         }
 
-        private void valorinvTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-
-            Calcular();
-
-        }
+        
 
         private void costoTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Calcular();
+            decimal costo = 0;
+            decimal existencia = 0;
+
+            if (!string.IsNullOrWhiteSpace(costoTextBox.Text) && costoTextBox.Text != "-")
+            {
+                costo = decimal.Parse(costoTextBox.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(existenciaTextBox.Text) && existenciaTextBox.Text != "-")
+            {
+                existencia = decimal.Parse(existenciaTextBox.Text);
+            }
+
+            decimal resultado = costo * existencia;
+
+            valorinvTextBox.Text = resultado.ToString();
+        }
+
+        private void existenciaTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            decimal costo = 0;
+            decimal existencia = 0;
+
+            if (!string.IsNullOrWhiteSpace(costoTextBox.Text) && costoTextBox.Text != "-")
+            {
+                costo = decimal.Parse(costoTextBox.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(existenciaTextBox.Text) && existenciaTextBox.Text != "-")
+            {
+                existencia = decimal.Parse(existenciaTextBox.Text);
+            }
+
+            decimal resultado = costo * existencia;
+
+            valorinvTextBox.Text = resultado.ToString();
         }
     }
 }
